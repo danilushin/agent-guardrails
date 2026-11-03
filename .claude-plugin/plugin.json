@@ -1,6 +1,6 @@
 {
   "name": "agent-guardrails",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Guardrails for coding agents that open their own pull requests: a merge gate, a pre-merge check, a CI wait and a duplicate scan. Pre-release.",
   "author": {
     "name": "agent-guardrails contributors"

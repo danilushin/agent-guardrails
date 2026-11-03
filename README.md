@@ -9,10 +9,10 @@ Guardrails for coding agents that open their own pull requests. Each guard exist
 - **CI wait** (`ci-wait --pr <N>` or `--sha <sha>`). One waiter with four verdicts (green, red, undetermined, timeout) that never spends the shared GraphQL quota.
 - **Duplicate scan** (`dup-scan --issue <N> --prebranch --files <a,b>`, and `--pre-pr` before opening the pull request). Finds an open or merged pull request for the same issue or the same files, and a local worktree or branch already working on it. Exit 3 holds, 4 means the scan could not tell, 0 is go.
 
-Install it from Claude Code 2.1.275 or later, where `<owner>` is the account that hosts this repository:
+Install it from Claude Code 2.1.275 or later:
 
 ```
-/plugin install agent-guardrails --marketplace <owner>/agent-guardrails
+/plugin install agent-guardrails --marketplace danilushin/agent-guardrails
 ```
 
 While the plugin is enabled, `premerge-guard`, `ci-wait` and `dup-scan` are on the Bash tool's `PATH`. All three need `python3` and the GitHub CLI (`gh`), signed in.
