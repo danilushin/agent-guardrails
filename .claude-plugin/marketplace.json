@@ -1,0 +1,14 @@
+{
+  "name": "agent-guardrails",
+  "owner": {
+    "name": "agent-guardrails contributors"
+  },
+  "description": "The agent-guardrails plugin, served from its own repository.",
+  "plugins": [
+    {
+      "name": "agent-guardrails",
+      "source": "./",
+      "description": "Guardrails for coding agents that open their own pull requests."
+    }
+  ]
+}

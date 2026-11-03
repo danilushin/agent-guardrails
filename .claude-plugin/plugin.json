@@ -1,0 +1,22 @@
+{
+  "name": "agent-guardrails",
+  "version": "0.1.0",
+  "description": "Guardrails for coding agents that open their own pull requests: a merge gate, a pre-merge check, a CI wait and a duplicate scan. Pre-release.",
+  "author": {
+    "name": "agent-guardrails contributors"
+  },
+  "license": "MIT",
+  "keywords": ["guardrails", "merge-gate", "ci", "coding-agents"],
+  "userConfig": {
+    "required_check": {
+      "type": "string",
+      "title": "Required CI check",
+      "description": "Name of the CI workflow (or check) a pull request must have green before it merges. Leave empty to use the repository's only workflow; a repository with several workflows then holds every merge until this is set."
+    },
+    "notify_command": {
+      "type": "string",
+      "title": "Command to run on each merge authorization",
+      "description": "Optional. Runs each time `mgo <N>` authorizes a merge, with the authorization record as JSON on stdin; for example a script that messages you. Split like a shell command line but run without a shell, and cut off after 5 seconds. Every authorization is also appended to arm-log.jsonl in the plugin's data directory."
+    }
+  }
+}

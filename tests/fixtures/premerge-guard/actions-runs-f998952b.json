@@ -1,0 +1,34 @@
+{
+  "_note": "SLIMMED from the live GET /repos/octo/home-repo/actions/runs?head_sha=f998952bdd37b7cbbcedbd4706f567cbb35a95f9 (2026-09-05, 51521 bytes). Only the fields the workflow-name join reads are kept; field VALUES are verbatim. The check-runs fixture beside this one is unslimmed.",
+  "total_count": 4,
+  "workflow_runs": [
+    {
+      "id": 33963007305,
+      "name": "PR label guard",
+      "head_sha": "f998952bdd37b7cbbcedbd4706f567cbb35a95f9",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 33963007282,
+      "name": "PR label guard",
+      "head_sha": "f998952bdd37b7cbbcedbd4706f567cbb35a95f9",
+      "status": "completed",
+      "conclusion": "cancelled"
+    },
+    {
+      "id": 33962989948,
+      "name": "agent-os tests",
+      "head_sha": "f998952bdd37b7cbbcedbd4706f567cbb35a95f9",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 33962989931,
+      "name": "PR label guard",
+      "head_sha": "f998952bdd37b7cbbcedbd4706f567cbb35a95f9",
+      "status": "completed",
+      "conclusion": "cancelled"
+    }
+  ]
+}

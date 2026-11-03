@@ -1,0 +1,40 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/run-py",
+            "args": ["2", "${CLAUDE_PLUGIN_ROOT}/hooks/merge_gate.py"],
+            "onFailure": "block"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/run-py",
+            "args": ["0", "${CLAUDE_PLUGIN_ROOT}/hooks/phrase_arm.py"],
+            "timeout": 40
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/run-py",
+            "args": ["--check"]
+          }
+        ]
+      }
+    ]
+  }
+}
